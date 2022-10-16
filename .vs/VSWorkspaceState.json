@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\Play.Catalog.Service",
+    "\\src\\Play.Catalog.Service\\Controllers",
+    "\\src\\Play.Catalog.Service\\Dtos"
+  ],
+  "SelectedNode": "\\src\\Play.Catalog.Service\\Controllers\\ItemsController.cs",
+  "PreviewInSolutionExplorer": false
+}
