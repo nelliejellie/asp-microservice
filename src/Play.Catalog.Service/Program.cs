@@ -18,13 +18,14 @@ BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
 // add a serializer to change date to string in mongodb
 BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
 
-var serviceSettings = builder.Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>(); 
+// serviceSettings = builder.Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>(); 
 
-builder.Services.AddSingleton(x => 
+// get database that will be currently used
+builder.Services.AddSingleton(serviceProvider => 
 {
     var mongoDbSettings = builder.Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
     var mongoClient = new MongoClient(mongoDbSettings.ConnectionString);
-    return mongoClient.GetDatabase(serviceSettings.ServiceName);
+    return mongoClient.GetDatabase(builder.Configuration.GetSection("ServiceSetting")["ServiceName"]);
 });
 
 builder.Services.AddSingleton<IItemsRepository, ItemsRepository>();
