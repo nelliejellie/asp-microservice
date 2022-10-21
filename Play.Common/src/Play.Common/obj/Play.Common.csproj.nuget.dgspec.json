@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\simplex\\Desktop\\apps\\dotnet\\microservice\\play.catalog\\src\\play.catalog.service\\Play.Catalog.Service.csproj": {}
+    "C:\\Users\\simplex\\Desktop\\apps\\dotnet\\microservice\\play.common\\src\\play.common\\Play.Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\simplex\\Desktop\\apps\\dotnet\\microservice\\play.catalog\\src\\play.catalog.service\\Play.Catalog.Service.csproj": {
+    "C:\\Users\\simplex\\Desktop\\apps\\dotnet\\microservice\\play.common\\src\\play.common\\Play.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\simplex\\Desktop\\apps\\dotnet\\microservice\\play.catalog\\src\\play.catalog.service\\Play.Catalog.Service.csproj",
-        "projectName": "Play.Catalog.Service",
-        "projectPath": "C:\\Users\\simplex\\Desktop\\apps\\dotnet\\microservice\\play.catalog\\src\\play.catalog.service\\Play.Catalog.Service.csproj",
+        "projectUniqueName": "C:\\Users\\simplex\\Desktop\\apps\\dotnet\\microservice\\play.common\\src\\play.common\\Play.Common.csproj",
+        "projectName": "Play.Common",
+        "projectPath": "C:\\Users\\simplex\\Desktop\\apps\\dotnet\\microservice\\play.common\\src\\play.common\\Play.Common.csproj",
         "packagesPath": "C:\\Users\\simplex\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simplex\\Desktop\\apps\\dotnet\\microservice\\play.catalog\\src\\play.catalog.service\\obj\\",
+        "outputPath": "C:\\Users\\simplex\\Desktop\\apps\\dotnet\\microservice\\play.common\\src\\play.common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\simplex\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,13 +42,21 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Mongodb.Driver": {
+            "Microsoft.Extensions.Configuration": {
               "target": "Package",
-              "version": "[2.17.1, )"
+              "version": "[6.0.1, )"
             },
-            "Swashbuckle.AspNetCore": {
+            "Microsoft.Extensions.Configuration.Binder": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.18.0, )"
             }
           },
           "imports": [
@@ -63,9 +71,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
